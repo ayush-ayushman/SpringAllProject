@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+       
+	<bean class="com.ty.beans.CricketCoach" id="cri">
+		<property name="cname" value="Ayushman"></property>
+		<property name="cmpid" value="cri123"></property>
+		<property name="coachfor" value="cricket"></property>
+
+	</bean>
+	<bean class="com.ty.beans.FootballCoach" id="foot">
+		<property name="fpname" value="AyushAyushman"></property>
+		<property name="fpid" value="f123014"></property>
+		<property name="coachfor" value="football"></property>
+
+	</bean>
+	<bean class="com.ty.beans.TeamCoach" id="team">
+		<property name="tname" value="AyushAyushman"></property>
+		<property name="tpid" value="t123014"></property>
+		<property name="coachfor" value="teamlead"></property>
+
+	</bean>
+	
+	<bean class="com.ty.beans.CoachInfo" id="di">
+		<property name="coach" ref="cri"></property>
+	</bean>
+
+</beans> 
